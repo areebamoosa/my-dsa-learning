@@ -208,3 +208,127 @@ int main()
 
     return 0;
 }
+
+// Leetcode 136 . Single Number
+
+#include <iostream>
+#include <vector>
+using namespace std;
+
+class Solution
+{
+public:
+    int singleNumber(vector<int> &nums)
+    {
+        int ans = 0;
+
+        for (int val : nums)
+        {
+            ans ^= val;
+        }
+        return ans;
+    }
+};
+
+int main()
+{
+    Solution s;
+    vector<int> nums = {4, 1, 2, 1, 2};
+    cout << "Single number is: " << s.singleNumber(nums) << endl;
+
+    return 0;
+}
+
+// MAX Sub Array Sum
+
+// LeetCode #53 — Maximum Subarray
+
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main()
+{
+    int n = 5;
+    int arr[] = {1, 2, 3, 4, 5};
+
+    for (int st = 0; st < n; st++)
+    {
+        for (int end = st; end < n; end++)
+        {
+            for (int i = st; i <= end; i++)
+            {
+                cout << arr[i];
+            }
+            cout << " ";
+        }
+        cout << endl;
+    }
+    return 0;
+}
+
+// Brute Force Approach
+
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main()
+{
+    int n = 5;
+    int arr[] = {1, 2, 3, 4, 5};
+
+    int maxSum = INT_MIN;
+
+    for (int st = 0; st < n; st++)
+    {
+        int currSum = 0;
+        for (int end = st; end < n; end++)
+        {
+            currSum += arr[end];
+            maxSum = max(currSum, maxSum);
+        }
+    }
+    cout << "Max Subarray sum = " << maxSum << endl;
+    return 0;
+}
+
+// Kadane's Algorithm
+
+#include <iostream>
+#include <vector>
+using namespace std;
+
+class Solution
+{
+public:
+    int maxSubArray(vector<int> &nums)
+    {
+        int currSum = 0;
+        int maxSum = INT_MIN;
+
+        for (int val : nums)
+        {
+            currSum += val;
+            maxSum = max(currSum, maxSum);
+            if (currSum < 0)
+            {
+                currSum = 0;
+            }
+        }
+        return maxSum;
+    }
+};
+
+int main()
+{
+
+    vector<int> nums = {-2, 1, -3, 4, -1, 2, 1, -5, 4};
+
+    Solution sol;
+    int result = sol.maxSubArray(nums);
+
+    cout << "Maximum subarray sum: " << result << endl;
+
+    return 0;
+}
