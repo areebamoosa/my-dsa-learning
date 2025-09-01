@@ -332,3 +332,181 @@ int main()
 
     return 0;
 }
+
+// Pair Sum
+// Return pair in sorted array with target sum = 9
+
+// Brute Force Approach
+
+#include <iostream>
+#include <vector>
+using namespace std;
+
+vector<int> pairSum(vector<int> nums, int target)
+{
+    vector<int> ans;
+    int n = nums.size();
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = i + 1; j < n; j++)
+        {
+            if (nums[i] + nums[j] == target)
+            {
+                ans.push_back(i);
+                ans.push_back(j);
+            }
+        }
+    }
+    return ans;
+}
+
+int main()
+{
+    vector<int> nums = {2, 7, 11, 15};
+    int target = 9;
+
+    vector<int> ans = pairSum(nums, target);
+    cout << ans[0] << ", " << ans[1] << endl;
+
+    return 0;
+}
+
+// Two Pointer Approach
+
+#include <iostream>
+#include <vector>
+using namespace std;
+
+vector<int> pairSum(vector<int> nums, int target)
+{
+    vector<int> ans;
+    int n = nums.size();
+
+    int i = 0;
+    int j = n - 1;
+
+    while (i < j)
+    {
+        int pairSum = nums[i] + nums[j];
+        if (pairSum > target)
+        {
+            j--;
+        }
+        else if (pairSum < target)
+        {
+            i++;
+        }
+        else
+        {
+            ans.push_back(i);
+            ans.push_back(j);
+            return ans;
+        }
+    }
+    return ans;
+}
+
+int main()
+{
+    vector<int> nums = {2, 7, 11, 15};
+    int target = 13;
+
+    vector<int> ans = pairSum(nums, target);
+    cout << ans[0] << ", " << ans[1] << endl;
+
+    return 0;
+}
+
+// Leetcode 169 Majority Element
+
+// Brute Force Approach
+
+class Solution
+{
+public:
+    int majorityElement(vector<int> &nums)
+    {
+        int n = nums.size();
+
+        for (int i = 0; i < n; i++)
+        {
+            int count = 0;
+            for (int j = 0; j < n; j++)
+            {
+                if (nums[i] == nums[j])
+                {
+                    count++;
+                }
+            }
+            if (count > n / 2)
+            {
+                return nums[i];
+            }
+        }
+        return -1;
+    }
+};
+
+// Optimised Approach
+
+class Solution
+{
+public:
+    int majorityElement(vector<int> &nums)
+    {
+        int n = nums.size();
+
+        // Sort
+        sort(nums.begin(), nums(end));
+
+        // Freq count
+        int freq = 1, ans = nums[0];
+        for (int i = 1; i < n; i++)
+        {
+            if (nums[i] == nums[i - 1])
+            {
+                freq++;
+            }
+            else
+            {
+                freq = 1;
+                ans = nums[i];
+            }
+            if (freq > / 2)
+            {
+                return ans;
+            }
+        }
+    }
+    return ans;
+}
+
+// Moores Voting Algorithm
+
+class Solution
+{
+public:
+    int majorityElement(vector<int> &nums)
+    {
+        int freq = 0;
+        int ans = 0;
+
+        int n = nums.size();
+        for (int i = 0; i < n; i++)
+        {
+            if (freq == 0)
+            {
+                ans = nums[i];
+            }
+            if (ans == nums[i])
+            {
+                freq++;
+            }
+            else
+            {
+                freq--;
+            }
+        }
+    }
+    return ans;
+}
