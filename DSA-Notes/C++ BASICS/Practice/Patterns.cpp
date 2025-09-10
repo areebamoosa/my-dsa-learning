@@ -386,7 +386,6 @@ int main()
     }
     return 0;
 }
-
 // Logic of this pattern      space    num
 // i=0   1 1 1 1                0       4
 // i=1     2 2 2                1       3

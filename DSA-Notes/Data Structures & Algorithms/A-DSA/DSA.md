@@ -16,7 +16,7 @@ First, let's consider an example without computers in mind, just to get the idea
 
 If we want to store data about people we are related to, we use a family tree as the data structure.
 
- We choose a family tree as the data structure because we have information about people we are related to and how they are related, and we want an overview so that we can easily find a specific family member, several generations back.
+We choose a family tree as the data structure because we have information about people we are related to and how they are related, and we want an overview so that we can easily find a specific family member, several generations back.
 
 With such a family tree data structure visually in front of you, it is easy to see, for example, who my mother's mother is—it is 'Emma,' right? But without the links from child to parents that this data structure provides, it would be difficult to determine how the individuals are related.
 

@@ -97,7 +97,7 @@ int main()
 #include <iostream>
 using namespace std;
 
-int x = 10; // Global Scope var can be accessed anywhere in the code
+int x = 10;
 
 int fun()
 {

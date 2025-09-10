@@ -2,7 +2,7 @@
 
 ## 1. If - else statement
 
-```cpp
+``` cpp
 #include<iostream>
 using namespace std;
 

@@ -100,9 +100,7 @@ int main() {
 
 **Output:**
 
-```
 Areeba - 20
-```
 
 👉 Here this lets us return the same object, so we can chain function calls in one line.
 

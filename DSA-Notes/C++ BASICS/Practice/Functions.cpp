@@ -129,7 +129,3 @@ int main()
 
     return 0;
 }
-
-// Q : Write a function to check if a numer is prime number or not.
-// Q : Write a function to print all prime numbers from 1 to N.
-// Q : Write a function to print nth Fibonacci.

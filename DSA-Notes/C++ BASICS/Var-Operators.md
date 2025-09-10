@@ -1,5 +1,3 @@
-# Basic Concepts of C++ Language
-
 ## Variables
 
 Containers to store data.

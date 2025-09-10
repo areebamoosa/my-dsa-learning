@@ -3,7 +3,6 @@
 ## Syntax of C++ Program (Boilerplate Code)
 
 ```cpp
-
 #include <iostream>
 using namespace std;
 

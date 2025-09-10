@@ -1,5 +1,3 @@
-// Basic Codes
-
 // Type Casting
 
 #include <iostream>
@@ -165,7 +163,7 @@ int main()
 
 // i = 2 , root i * root i < = n
 
-// So we chage the condition.
+// So we change the condition.
 
 #include <iostream>
 using namespace std;
