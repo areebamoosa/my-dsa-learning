@@ -37,6 +37,27 @@ cout << sizeof(marks) / sizeof(int) << endl;
 // 20 bytes / 4 = 5
 ```
 
+**Example:**
+
+my_array = {7, 12, 9, 4, 11} → it has 5 integers.
+
+If int = 4 bytes → total size = 5 \* 4 = 20 bytes.
+
+sizeof(my_array[0])
+
+Gives the size of a single element in the array.
+
+Here, my_array[0] is an int, so sizeof(my_array[0]) = 4 bytes.
+
+```
+sizeof(my_array) / sizeof(my_array[0])
+```
+
+= (Total bytes of array) ÷ (Bytes of one element)
+= 20 / 4 = 5
+
+So we get the number of elements in the array.
+
 ### Example
 
 ```cpp
