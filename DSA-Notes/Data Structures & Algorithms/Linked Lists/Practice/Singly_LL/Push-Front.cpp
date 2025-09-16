@@ -1,4 +1,7 @@
-// Create a function that inserts a new node at the beginning of a singly linked list. Insert the values 10, 20, 30 one by one using this function, then print the list.
+// Push front / Insert at beginning
+
+// Task : Create a function that inserts a new node at the beginning of a singly linked list.
+// Insert the values 10, 20, 30 one by one using this function, then print the list.
 
 #include<iostream>
 using namespace std;

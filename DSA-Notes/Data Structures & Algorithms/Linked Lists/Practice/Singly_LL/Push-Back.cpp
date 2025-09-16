@@ -1,4 +1,7 @@
-// Q2 : Create a function that inserts a new node at the end of a singly linked list. Insert the values 10, 20, 30 one by one using this function, then print the list.
+// Push back / Insert at end
+
+// Task : Create a function that inserts a new node at the end of a singly linked list. 
+// Insert the values 10, 20, 30 one by one using this function, then print the list.
 
 #include<iostream>
 using namespace std;
