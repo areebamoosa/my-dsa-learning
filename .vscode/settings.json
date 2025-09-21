@@ -1,6 +1,21 @@
 {
     "files.associations": {
         "*.dbclient-js": "javascript",
-        "iostream": "cpp"
+        "iostream": "cpp",
+        "__bit_reference": "cpp",
+        "__node_handle": "cpp",
+        "atomic": "cpp",
+        "bitset": "cpp",
+        "limits": "cpp",
+        "locale": "cpp",
+        "optional": "cpp",
+        "ratio": "cpp",
+        "system_error": "cpp",
+        "tuple": "cpp",
+        "type_traits": "cpp",
+        "vector": "cpp",
+        "__memory": "cpp",
+        "chrono": "cpp",
+        "cstddef": "cpp"
     }
 }
