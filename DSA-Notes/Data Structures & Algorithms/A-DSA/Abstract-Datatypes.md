@@ -52,7 +52,6 @@ The definition of ADT only mentions what operations are to be performed but not 
 
 The process of providing only the essentials and hiding the details is known as **abstraction**
 
-ADT's are basically entities that are definitions of data and operations but do not have implementation details.
 
 They are like user defined data types which defines operations on values using functions without specifying what is there inside the function and how the operations are performed.
 

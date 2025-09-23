@@ -116,6 +116,39 @@ int main() {
 }
 ```
 
+## Advantages of Binary Search
+
+
+- Works in O(log n) time, much faster than Linear Search (O(n)).
+Example: Searching in 1,000,000 elements takes at most ~20 steps.
+
+- Compares only a small number of elements because it halves the search space each time.
+
+- Very useful when searching repeatedly in large sorted datasets.
+
+## Disadvantages of Binary Search
+
+
+- The array/list must be sorted before searching; otherwise, results are incorrect.
+
+- Sorting takes extra time. If data changes often (insert/delete), it’s inefficient.
+
+- Works best with arrays.
+
+- On linked lists, it’s inefficient because you can’t directly access the middle element
+
+
+
+| **Feature**        | **Linear Search**                       | **Binary Search**                        |
+|---------------------|-----------------------------------------|------------------------------------------|
+| **1. Data order**   | Works on **unsorted** and sorted data   | Works only on **sorted** data            |
+| **2. Approach**     | Checks elements one by one              | Divides the list into halves repeatedly  |
+| **3. Time (Worst)** | **O(n)** (slow for large data)          | **O(log n)** (much faster)               |
+| **4. Simplicity**   | Very simple and easy to implement       | Slightly more complex to implement       |
+| **5. Data type**    | Works on arrays, lists, linked lists    | Best with arrays (random access needed)  |
+
+
+
 #### Complexity Analysis of Binary Search Algorithm
 
 **Time Complexity:**
@@ -127,3 +160,5 @@ int main() {
 -> **Worst Case:** O(log N)
 
 **Auxiliary Space:** O(1), If the recursive call stack is considered then the auxiliary space will be O(log N).
+
+
