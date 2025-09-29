@@ -16,6 +16,7 @@
         "vector": "cpp",
         "__memory": "cpp",
         "chrono": "cpp",
-        "cstddef": "cpp"
+        "cstddef": "cpp",
+        "iosfwd": "cpp"
     }
 }
