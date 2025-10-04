@@ -35,7 +35,9 @@ So, Queue is like a line of people waiting to purchase tickets, where the first 
 - Deletion is allowed only from the front.
 - Can be implemented using a linked list or a circular array.
 
-## Declaration of Queue using Linked List
+## Implementation of Linear Queue
+
+### Declaration of Queue using Linked List
 To implement a queue with a linked list, we maintain:
 
 1. A Node structure/class that contains:
@@ -48,7 +50,7 @@ To implement a queue with a linked list, we maintain:
 - front → points to the first node (head of the queue).
 - rear → points to the last node (tail of the queue).
 
-## Declaration of Queue Using Array:
+### Declaration of Queue Using Array:
 
 To implement a queue with an array, we maintain:
 
@@ -56,4 +58,10 @@ To implement a queue with an array, we maintain:
 
 - A variable size to track the current number of elements in the queue.
 - A variable capacity to represent the maximum number of elements the queue can hold.
+
+## Implementation of Circular Queue Using Arrays
+
+A circular queue is a linear data structure that overcomes the limitations of a simple queue. 
+
+In a normal array implementation, dequeue() can be O(n) or we may waste space. Using a circular array, both enqueue() and dequeue() can be done in O(1).
 
