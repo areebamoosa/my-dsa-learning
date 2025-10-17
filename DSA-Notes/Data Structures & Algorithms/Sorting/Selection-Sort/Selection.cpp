@@ -6,7 +6,10 @@ void selectionSort(int arr[], int n)
 
     for (int i = 0; i < n - 1; i++)
     {
-        int smallestIdx = i; // Unsorted part starting
+
+        // Assuming the cur position holds the minimum element
+        int smallestIdx = i;
+
         for (int j = i + 1; j < n; j++)
         {
             if (arr[j] < arr[smallestIdx])
@@ -14,6 +17,8 @@ void selectionSort(int arr[], int n)
                 smallestIdx = j;
             }
         }
+        
+        // Moving min element to it's correct position, the start of array.
         swap(arr[i], arr[smallestIdx]);
     }
 }
