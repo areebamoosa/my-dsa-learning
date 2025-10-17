@@ -100,3 +100,41 @@ A stack can be implemented using a linked list where we maintain:
 
 - A pointer/reference top that always points to the current top node of the stack.
 Initially, top = null to represent an empty stack.
+
+## Pseudocode of Stack
+
+```
+Initialize:
+    Stack S
+    Top = -1
+    MaxSize = N
+
+Algorithm Push(x):
+    if Top == MaxSize - 1:
+        print "Stack Overflow"
+    else:
+        Top = Top + 1
+        S[Top] = x
+
+Algorithm Pop():
+    if Top == -1:
+        print "Stack Underflow"
+        return None
+    else:
+        x = S[Top]
+        Top = Top - 1
+        return x
+
+Algorithm Peek():
+    if Top == -1:
+        print "Stack is Empty"
+        return None
+    else:
+        return S[Top]
+
+Algorithm isEmpty():
+    return Top == -1
+
+Algorithm isFull():
+    return Top == MaxSize - 1
+```
