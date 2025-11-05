@@ -15,7 +15,7 @@ class Node{
     }
 };
 
-// Inserting nodes in tree
+// Inserting a node in BST
 Node* insert(Node* root, int val){
     if (root == NULL){
         return new Node (val);
@@ -50,12 +50,77 @@ void inOrder(Node* root){
     inOrder(root->right);
 }
 
+// Searching a node in BST
+bool Search(Node* root, int key){
+
+    if (root == NULL){
+        return -1;
+    }
+
+    if ( root->data == key){
+        return true;
+    }
+
+    if (root->data > key){
+        return Search(root->left, key);
+    } 
+    else {
+        return Search(root->right, key);
+    }
+}
+
+Node* getInorderSuccessor(Node* root){
+    while (root != NULL && root->left != NULL){
+        root = root->left;
+    }
+    return root;
+}
+
+// Deleting a node in BST
+Node* delNode(Node* root, int key){
+    if (root == NULL){
+        return NULL;
+    }
+
+    if (key < root->data){
+        root->left = delNode(root->left, key);
+    } else if (key > root->data){
+        root->right = delNode(root->right, key);
+    } else {
+        // Key == root
+        if (root->left == NULL){
+            Node* temp = root->left;
+            delete root;
+            return temp;
+        } else if (root->right == NULL){
+            Node* temp = root->right;
+            delete root;
+            return temp;
+        } else {  // 2 Children
+          Node* IS = getInorderSuccessor(root->right);
+          root->data = IS->data;
+          root->right = delNode(root->right, IS->data);
+        }
+    }
+    return root;
+}
+
 int main(){
 
     vector<int> arr = {3,2,1,5,6,4};
 
     Node* root = buildBST(arr);
 
+    cout << "Binary Search Tree" << endl;
+
+    inOrder(root);
+    cout << endl;
+
+    cout << Search(root,5) << endl;
+
+    cout << "Binary Search Tree after deletion of Nodes" << endl;
+
+    delNode(root, 6);
     inOrder(root);
     cout << endl;
 
