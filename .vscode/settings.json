@@ -17,6 +17,7 @@
         "__memory": "cpp",
         "chrono": "cpp",
         "cstddef": "cpp",
-        "iosfwd": "cpp"
+        "iosfwd": "cpp",
+        "queue": "cpp"
     }
 }
