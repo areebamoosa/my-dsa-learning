@@ -26,6 +26,7 @@ public:
     }
 
     // Insert Node Function
+    // In a Binary tree, nodes are inserted in such a way that the tree fills from left to right.
     void insertNode(int val){
         Node *newNode = new Node(val);
 
@@ -84,6 +85,7 @@ public:
         Node *last;
 
         // Step 1: Find keyNode and lastNode (deepest rightmost node)
+        // The deepest node is always the last node visited in level order traversal
         while (!q.empty()){
             curr = q.front();
             q.pop();
@@ -99,7 +101,8 @@ public:
                 q.push(curr->right);
             }
 
-            last = curr; // last processed node will be deepest rightmost
+            last = curr;
+            // after the loop ends → curr is the deepest rightmost node
         }
 
         // Step 2: Replace keyNode's data and delete deepest node
