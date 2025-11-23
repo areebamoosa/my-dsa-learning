@@ -78,27 +78,46 @@ Node* getInorderSuccessor(Node* root){
 
 // Deleting a node in BST
 Node* delNode(Node* root, int key){
+
     if (root == NULL){
         return NULL;
     }
-
+    // Step 01 : Searching the Key
     if (key < root->data){
         root->left = delNode(root->left, key);
     } else if (key > root->data){
         root->right = delNode(root->right, key);
-    } else {
-        // Key == root
+    } 
+    
+    // Step  02 : When we found the Node
+    // Key == root
+    else {
+
+        // Case 1 & 2 : No child + One child
         if (root->left == NULL){
-            Node* temp = root->left;
-            delete root;
-            return temp;
-        } else if (root->right == NULL){
+        // no left child -> return right child (could be NULL or a subtree)
             Node* temp = root->right;
             delete root;
             return temp;
-        } else {  // 2 Children
+        } 
+
+        else if (root->right == NULL){
+        // no right child -> return left child
+            Node* temp = root->left;
+            delete root;
+            return temp;
+        } 
+
+        // Case 3 : 2 Children
+        else {
+
+        // Find inorder successor (smallest value in right subtree)
           Node* IS = getInorderSuccessor(root->right);
-          root->data = IS->data;
+
+        // Replacing data
+        root->data = IS->data;
+
+        // Deleting the inorder successor node from right subtree
           root->right = delNode(root->right, IS->data);
         }
     }
