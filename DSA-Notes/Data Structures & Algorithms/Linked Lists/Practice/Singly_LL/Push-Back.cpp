@@ -19,12 +19,11 @@ class Node{
 
 class linkedList{
     Node* head;
-    Node* tail;
 
     public:
 
     linkedList(){
-        head = tail = NULL;
+        head  = NULL;
     }
 
     // Push back function
@@ -32,12 +31,21 @@ class linkedList{
         Node *newNode = new Node(data);
 
         if (head == NULL){
-            head = tail = newNode;
+            head  = newNode;
             return;
         } else {
-            tail->next = newNode;
-            tail = newNode;
-            tail->next = NULL;
+
+        Node* temp = head;
+
+    while (temp->next != NULL) {
+        temp = temp->next;
+    }
+
+    temp->next = newNode;
+
+            
+            
+            
         }
     }
 

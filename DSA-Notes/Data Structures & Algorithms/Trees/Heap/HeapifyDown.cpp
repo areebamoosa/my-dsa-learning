@@ -31,8 +31,9 @@ void deleteRoot(int arr[], int& n){
         return;
     }
 
-    arr[0] = arr[n - 1];
-    n = n - 1;
+    // When we delete the root of a Max Heap: Root is at index 0, We replace it with the last element.
+    arr[0] = arr[n - 1]; // Move last element to root
+    n = n - 1; // Reducing heap size
 
     HeapifyDown(arr,n,0);
 }

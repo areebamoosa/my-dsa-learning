@@ -117,7 +117,7 @@ Node* delNode(Node* root, int key){
         // Replacing data
         root->data = IS->data;
 
-        // Deleting the inorder successor node from right subtree
+        // Deleting the inorder successor node fromd right subtree
           root->right = delNode(root->right, IS->data);
         }
     }

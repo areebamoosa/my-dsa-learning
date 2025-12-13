@@ -144,7 +144,7 @@ public:
             }
         }
         else{
-            // If thee keynode is not found
+            // If the keynode is not found
             cout << "Node with value " << key << " not found." << endl;
         }
     }

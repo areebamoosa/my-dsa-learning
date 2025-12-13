@@ -27,18 +27,28 @@ class linkedList{
         head = tail = NULL;
     }
 
-    // Push front function
-    void push_front(int data){
-        Node* newNode = new Node(data);
-        if (head == NULL){
-            head = tail = newNode;
-            newNode->next = newNode;
-        } else {
-        newNode->next = head;
+    void push_front( int val) {
+    Node* newNode = new Node(val);
+
+    if (head == NULL) {
+        newNode->next = newNode;
         head = newNode;
-        tail->next = head;
-        }
+        return;
     }
+
+    Node* temp = head;
+
+    while (temp->next != head) {
+        temp = temp->next;
+    }
+
+    // Insert newNode at front
+    newNode->next = head;
+    temp->next = newNode;
+
+    head = newNode;
+}
+
 
     //Printing ll function
     void print_ll(){

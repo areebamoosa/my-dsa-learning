@@ -28,18 +28,25 @@ class linkedList{
     }
 
     // Push Back function
-    void push_back(int data){
-        Node* newNode = new Node(data);
+    void push_back(int val) {
+    Node* newNode = new Node(val);
 
-        if(head == NULL){
-            head = tail = newNode;
-            newNode->next = newNode;
-        } else {
-            newNode->next = tail->next;
-            tail->next = newNode;
-            tail = newNode;
-        }
+    if (head == NULL) {
+        newNode->next = newNode;
+        head = newNode;
+        return;
     }
+
+    Node* temp = head;
+
+    while (temp->next != head) {
+        temp = temp->next;
+    }
+
+    temp->next = newNode;
+    newNode->next = head;
+}
+
 
     // Print ll function
     void print_ll(){

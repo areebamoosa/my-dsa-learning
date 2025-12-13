@@ -27,26 +27,33 @@ class linkedList{
     }
 
     // Delete at head function
-    void delete_head(){
-        Node* temp = head;
-
-        if (head == NULL){ // Case 01 : When the list is empty
-            cout << "The linkedlist is empty" << endl;
-            return;
-        } 
-
-        if (head == tail ){ // Case 02 :When list has one node
-        delete head;
-        head = tail = NULL;
+    void delete_head() {
+    // Case 1: List is empty
+    if (head == NULL)
         return;
-        }
 
-        // Case 03 : When list has more than one nodes
-        tail->next = temp->next;
-        head = temp->next;
-        temp->next = NULL;
-        delete temp;
+    // Case 2: Only one node
+    if (head->next == head) {
+        delete head;
+        head = NULL;
+        return;
     }
+
+    // Case 3: More than one node
+    Node* temp = head;
+
+    Node* last = head;
+    while (last->next != head) {
+        last = last->next;
+    }
+
+    last->next = head->next;
+
+    head = head->next;
+
+    delete temp;
+}
+
 
     // Push front function
     void push_front(int data){
