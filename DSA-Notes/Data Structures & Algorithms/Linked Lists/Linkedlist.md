@@ -27,10 +27,6 @@ The singly linked list is the simplest form of linked list in which the node con
 
 Each node in a singly linked list is connected through the next pointer and the next pointer of the last node points to NULL denoting the end of the linked list.
 
-The following diagram describes the structure of a singly linked list:
-
-![singly-linkelist](/DSA-Notes/Assets/singly-linked-list.webp)
-
 ### Representation
 
 Singly linked list can be represented as a pointer to the first node, where each node contains:
