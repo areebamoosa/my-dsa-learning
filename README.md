@@ -4,13 +4,13 @@ This repository contains all the **Data Structures and Algorithms (DSA)** concep
 
 ---
 
-## 📌 What’s Inside
+##  What’s Inside
 
 - DSA theory explained in an easy way
 - Topic-wise practice questions
 - Organized folders for quick revision
 
-## 🧠 Topics Covered
+##  Topics Covered
 
 - Arrays
 - Linked Lists
